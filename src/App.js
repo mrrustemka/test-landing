@@ -9,6 +9,9 @@ import coin_4 from "./Images/coin-4.png";
 import coin_5 from "./Images/coin-5.png";
 import coin_6 from "./Images/coin-6.png";
 import coin_7 from "./Images/coin-7.png";
+import Header from "./Components/Header";
+import Slogan from "./Components/Slogan";
+import Form from "./Components/Form";
 
 function App() {
   // State to store the horizontal position of the mouse
@@ -44,14 +47,14 @@ function App() {
     const coinImages = [coin_1, coin_2, coin_3, coin_4, coin_5, coin_6, coin_7];
     const generatedCoins = [];
 
-    // Generate 20 coins (you can adjust this number)
+    // Generate coins count
     for (let i = 0; i < 10; i++) {
       const randomCoin =
         coinImages[Math.floor(Math.random() * coinImages.length)];
       const randomPositionX = Math.round(
         Math.floor(Math.random() * (95 - 5 + 1)) + 5
       ); // Random horizontal position (percent)
-      const animationDuration = Math.random() * 3 + 3; // Random fall duration (between 3s and 6s)
+      const animationDuration = Math.random() * 12 + 3; // Random fall duration (between 3s and 6s)
 
       generatedCoins.push({
         id: i,
@@ -93,6 +96,11 @@ function App() {
               <img src={coin.image} alt="coin" />
             </div>
           ))}
+          <div className="content">
+            <Header />
+            <Slogan />
+            <Form />
+          </div>
         </div>
       </div>
     </div>
