@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .app {
   background-image: url(./Images/coins.png), url(./Images/bg-center.png),
     url(./Images/bg.jpg);
@@ -6,4 +10,30 @@
   background-size: contain, auto, cover;
   width: 100vw;
   height: 100vh;
+}
+
+.falling-coins-container {
+  position: static;
+  width: 100vw;
+  height: 100vh;
+}
+
+.falling-coin {
+  position: absolute;
+  top: -50px; /* Start above the screen */
+  animation: fall linear infinite; /* Make the animation repeat infinitely */
+}
+
+.falling-coin img {
+  width: 50%; /* Adjust the size of the coins */
+  height: auto;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0); /* Start from the top */
+  }
+  100% {
+    transform: translateY(100vh); /* Fall to the bottom */
+  }
 }
