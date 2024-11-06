@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  font-size: 0.8rem;
 }
 
 .app {
@@ -50,6 +51,7 @@ body {
   grid-column-start: 2;
   grid-column-end: 3;
   padding-top: 4vh;
+  z-index: 1;
 }
 
 .header-logos {
@@ -94,6 +96,7 @@ body {
   margin: 3.7037vh 0;
   padding-right: 0.46296vh;
   position: relative;
+  z-index: 1;
 }
 
 .form {
@@ -101,4 +104,190 @@ body {
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
+  background: url(./Images/bg-form.jpg) no-repeat 50% / cover;
+  border: 2px solid #ffb800;
+  border-radius: 8px;
+  padding: 4vh;
+  z-index: 1;
+  color: #fff;
+}
+
+.form-title__title {
+  text-transform: uppercase;
+  -webkit-text-stroke-color: #cc0100;
+  -webkit-text-stroke-width: 1px;
+  background: linear-gradient(
+    180deg,
+    #fffe1f 26.15%,
+    #fffe1f 41.35%,
+    #ffa20c 64.15%,
+    #ffc70e 78.57%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-title__bonus {
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  -webkit-text-stroke-color: #cc0100;
+  -webkit-text-stroke-width: 1px;
+  background: linear-gradient(
+    180deg,
+    #fffe1f 26.15%,
+    #fffe1f 41.35%,
+    #ffa20c 64.15%,
+    #ffc70e 78.57%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-title {
+  font-family: Roboto-Bold, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tabs__item {
+  list-style: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.tabs__item > button {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  padding: 0.4rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 36, 0, 0),
+    #ff2400 49.1%,
+    rgba(255, 36, 0, 0)
+  );
+}
+
+.phone-dropdown {
+  background-color: transparent;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #fff;
+  color: #fff;
+}
+
+.select-phone__placeholder-input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.email-form__email-input,
+.email-form__password-input {
+  display: block;
+  /* width: 100%; */
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+  box-sizing: border-box;
+}
+
+.email-form__password-input {
+  display: inline-block;
+  width: 90%;
+}
+
+.email-form__email-input {
+  width: 100%;
+}
+
+.email-form__password-input::placeholder,
+.email-form__email-input::placeholder {
+  color: #fff;
+}
+
+.email-form,
+.password-form {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+  margin: 0.4rem 0;
+}
+
+.form-phone,
+.form-currency {
+  border-bottom: 1px solid #fff;
+  padding: 0.4rem;
+}
+
+.currency-dropdown {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.submit-btn {
+  margin: 0.8rem auto;
+  width: 100%;
+  height: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background: #ff2400;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.forms__questions {
+  text-align: center;
+}
+
+.forms__signin-link {
+  color: #ff2400;
+}
+
+.checkbox__text {
+  display: inline;
+  margin-left: 4px;
+}
+
+.email-form__view-icon {
+  display: inline-block;
+}
+
+.email-form__view-icon > img {
+  min-height: 21px;
 }
