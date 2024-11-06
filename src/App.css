@@ -338,3 +338,63 @@ body {
 .checkbox-container input:checked + .custom-checkbox::after {
   opacity: 0;
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-right: 1px solid #fff;
+  width: 15%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  background-color: #840121;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0.2rem;
+}
+
+.dropdown-option {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-option:hover {
+  background-color: #420010;
+  color: #fff;
+}
+
+.dropdown-menu > li > img {
+  height: 0.8rem;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.dropdown-button-flag {
+  height: 0.8rem;
+  margin-right: 8px;
+}
+
+.dropdown-phone {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  color: #fff;
+  width: 82%;
+  padding: 0 0.2rem;
+}

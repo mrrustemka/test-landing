@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import show from "../Images/view-white.svg";
 import hide from "../Images/view-close-white.svg";
 import Checkbox from "./Checkbox";
-
-// import kaz from "../Images/kazakhstan.png";
-// import rus from "../Images/russia.png";
-// import tur from "../Images/turkey.png";
+import PhoneDropdown from "./Dropdown";
+import kaz from "../Images/kazakhstan.png";
+import rus from "../Images/russia.png";
+import tur from "../Images/turkey.png";
 
 const Form = () => {
+  const phones = [
+    { id: 1, name: "kaz", label: "+7 Казахстан", code: "+7", logo: kaz },
+    { id: 2, name: "rus", label: "+7 Россия", code: "+7", logo: rus },
+    { id: 3, name: "tur", label: "+90 Турция", code: "+90", logo: tur }
+  ];
   const [isPhoneForm, setIsPhoneForm] = useState(true);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [phoneCountry, setPhoneCountry] = useState("kaz");
+  // const [phoneCountry, setPhoneCountry] = useState(phones[0]);
   const [currency, setCurrency] = useState("kaz");
   const [rules, setRules] = useState(false);
   const [policy, setPolicy] = useState(true);
-
-  const handlePhoneCountry = (event) => {
-    setPhoneCountry(event.target.value);
-  };
-
   const handleCurrency = (event) => {
     setCurrency(event.target.value);
   };
@@ -31,7 +31,8 @@ const Form = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     alert("Submitted");
   };
 
@@ -66,33 +67,14 @@ const Form = () => {
           </button>
         </li>
       </ul>
-      <form className="" method="post" action="#">
+      <form className="" action="#">
         {isPhoneForm ? (
           <>
             <div className="form-phone">
               <p className="phone-form__header">
                 Введите номер своего телефона
               </p>
-              <select
-                value={phoneCountry}
-                onChange={handlePhoneCountry}
-                className="phone-dropdown"
-              >
-                <option value="kaz">+77 Казахстан</option>
-                <option value="rus">+77 Россия</option>
-                <option value="tur">+95 Турция</option>
-              </select>
-              <input
-                className="select-phone__placeholder-input"
-                required
-                type="tel"
-                id="phone-id"
-                name="phone"
-                placeholder="+77"
-                minLength="3"
-                maxLength="12"
-                autocomplete="off"
-              />
+              <PhoneDropdown options={phones} />
             </div>
           </>
         ) : (
@@ -140,7 +122,11 @@ const Form = () => {
             <option value="tur">₺ | TRY | Турция</option>
           </select>
         </div>
-        <button className="submit-btn" type="button" onClick={handleSubmit}>
+        <button
+          className="submit-btn"
+          type="button"
+          onClick={(e) => handleSubmit(e)}
+        >
           Зарегистрироваться
         </button>
         <div className="forms__questions">
