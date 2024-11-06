@@ -35,11 +35,9 @@ function App() {
 
   // Calculate the background position based on mouseX
   const backgroundPosition_1 = Math.round(
-    ((mouseX / window.innerWidth) * 100) / 7,
-    2
+    5 + ((mouseX / window.innerWidth) * 100) / 17
   );
   const backgroundPosition_2 = 100 - backgroundPosition_1;
-
   const [coins, setCoins] = useState([]);
 
   useEffect(() => {
@@ -80,7 +78,7 @@ function App() {
             backgroundPosition_2 +
             "% bottom",
           backgroundSize: "20%",
-          transition: "background-position ease-out",
+          transition: "background-position 0.5s ease-out",
           backgroundRepeat: "no-repeat"
         }}
       >
