@@ -213,12 +213,12 @@ body {
 .form__email__input,
 .form__password__input {
   display: block;
-  /* width: 100%; */
   background-color: transparent;
   color: #fff;
   border: none;
   padding: 0.2rem 0.2rem 0.2rem 0.8rem;
   box-sizing: border-box;
+  outline: none;
 }
 
 .form__password__input {
@@ -395,4 +395,5 @@ body {
   color: #fff;
   width: 82%;
   padding: 0 0.2rem;
+  outline: none;
 }
