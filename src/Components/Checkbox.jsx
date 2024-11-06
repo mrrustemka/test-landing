@@ -1,10 +1,9 @@
 import "../App.css";
 
-const Checkbox = ({ label, handler }) => {
+const Checkbox = ({ checked, handler }) => {
   return (
     <label className="checkbox">
-      {label}
-      <input type="checkbox" checked={label} onChange={() => handler()} />
+      <input type="checkbox" checked={checked} onChange={() => handler()} />
       <span className="checkbox__custom"></span>
     </label>
   );

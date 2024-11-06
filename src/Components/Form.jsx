@@ -34,6 +34,14 @@ const Form = () => {
     alert("Submitted");
   };
 
+  const handleRulesChange = () => {
+    setRules(!rules);
+  };
+
+  const handlePolicyChange = () => {
+    setPolicy(!policy);
+  };
+
   return (
     <div className="form">
       {/* <img
@@ -139,7 +147,7 @@ const Form = () => {
         </div>
         <div className="form__checkbox">
           <div className="form__checkbox__item form__checkbox__item--rules">
-            <Checkbox label={rules} handler={setRules} />
+            <Checkbox checked={rules} handler={handleRulesChange} />
             <div className="form__checkbox__text">
               {"Я согласен "}
               <a className="form__questions__link" href="#">
@@ -148,7 +156,7 @@ const Form = () => {
             </div>
           </div>
           <div className="form__checkbox__item form__checkbox__item--sub">
-            <Checkbox label={policy} handler={setPolicy} />
+            <Checkbox checked={policy} handler={handlePolicyChange} />
             <div className="form__checkbox__text">
               Получать рассылку об акциях по e-mail и sms
             </div>
