@@ -21,6 +21,7 @@ const PhoneDropdown = ({ options }) => {
   return (
     <div className="dropdown">
       <button
+        type="button"
         className={`dropdown__button ${isOpen ? "dropdown__button--open" : ""}`}
         onClick={toggleDropdown}
       >
