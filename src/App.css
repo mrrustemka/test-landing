@@ -244,17 +244,9 @@ body {
   margin: 0.4rem 0;
 }
 
-.form__phone,
-.form__currency {
+.form__phone {
   border-bottom: 1px solid #fff;
   padding: 0.4rem;
-}
-
-.form__currency-dropdown {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  color: #fff;
 }
 
 .form__submit-btn {
@@ -356,7 +348,7 @@ body {
   position: absolute;
   width: 100%;
   background-color: #840121;
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 4px;
@@ -372,7 +364,8 @@ body {
   transition: background-color 0.2s;
 }
 
-.dropdown__option:hover {
+.dropdown__option:hover,
+.select-currency__item:hover {
   background-color: #420010;
   color: #fff;
 }
@@ -400,4 +393,76 @@ body {
 
 .app__background {
   position: absolute;
+}
+
+.select-currency {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-currency__main {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+}
+
+.select-currency__placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.select-currency__text {
+  font-size: 12px;
+  color: #fff;
+  display: inline-block;
+  margin: 0 0.1rem;
+}
+
+.select-currency__name {
+  display: inline-block;
+  margin: 0 0.1rem;
+}
+
+.select-currency__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #840121;
+  border: 1px solid #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+}
+
+.select-currency__item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-currency__item i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.select-currency__default-input {
+  display: none;
 }

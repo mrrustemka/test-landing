@@ -3,6 +3,7 @@ import show from "../Images/view-white.svg";
 import hide from "../Images/view-close-white.svg";
 import Checkbox from "./Checkbox";
 import PhoneDropdown from "./PhoneDropdown";
+import CurrencyDropdown from "./CurrencyDropdown";
 import kaz from "../Images/kazakhstan.png";
 import rus from "../Images/russia.png";
 import tur from "../Images/turkey.png";
@@ -121,17 +122,7 @@ const Form = () => {
             </div>
           </div>
         )}
-        <div className="form__currency">
-          <select
-            value={currency}
-            onChange={handleCurrency}
-            className="form__currency-dropdown"
-          >
-            <option value="kaz">₸ | KZT | Казахстан</option>
-            <option value="rus">₽ | RUB | Россия</option>
-            <option value="tur">₺ | TRY | Турция</option>
-          </select>
-        </div>
+        <CurrencyDropdown />
         <button
           className="form__submit-btn"
           type="button"
