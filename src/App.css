@@ -397,3 +397,7 @@ body {
   padding: 0 0.2rem;
   outline: none;
 }
+
+.app__background {
+  position: absolute;
+}
