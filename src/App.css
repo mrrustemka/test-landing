@@ -70,7 +70,7 @@ body {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
-  font-size: 4.44444vh;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-family: Roboto-Black, sans-serif;
   line-height: 1;
@@ -93,9 +93,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b60001;
-  margin: 3.7037vh 0;
-  padding-right: 0.46296vh;
-  position: relative;
+  margin: 1.4rem 0;
   z-index: 1;
 }
 
