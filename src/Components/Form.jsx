@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import show from "../Images/view-white.svg";
 import hide from "../Images/view-close-white.svg";
 import Checkbox from "./Checkbox";
-import PhoneDropdown from "./Dropdown";
+import PhoneDropdown from "./PhoneDropdown";
 import kaz from "../Images/kazakhstan.png";
 import rus from "../Images/russia.png";
 import tur from "../Images/turkey.png";
@@ -15,7 +15,6 @@ const Form = () => {
   ];
   const [isPhoneForm, setIsPhoneForm] = useState(true);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  // const [phoneCountry, setPhoneCountry] = useState(phones[0]);
   const [currency, setCurrency] = useState("kaz");
   const [rules, setRules] = useState(false);
   const [policy, setPolicy] = useState(true);
@@ -32,7 +31,6 @@ const Form = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     alert("Submitted");
   };
 
@@ -43,35 +41,39 @@ const Form = () => {
         src="img/bonus/gift.png"
         alt="Gift"
       /> */}
-      <div className="form-title">
-        <div className="form-title__title">НА ПЕРВЫЙ ДЕПОЗИТ</div>
-        <div className="form-title__bonus">2 000 000₸ + 250 FS!</div>
+      <div className="form__title">
+        <div className="form__title__text">НА ПЕРВЫЙ ДЕПОЗИТ</div>
+        <div className="form__bonus">2 000 000₸ + 250 FS!</div>
       </div>
-      <ul className="tabs">
-        <li className="tabs__item">
+      <ul className="form__tabs">
+        <li className="form__tabs__item">
           <button
-            className={`tabs__button ${isPhoneForm ? "active" : ""}`}
+            className={`form__tabs__button ${
+              isPhoneForm ? "form__tabs__button--active" : ""
+            }`}
             onClick={toggleForm}
             id="reg-btn-tel"
           >
-            <span className="title">По телефону</span>
+            <span className="form__tabs__button__title">По телефону</span>
           </button>
         </li>
-        <li className="tabs__item">
+        <li className="form__tabs__item">
           <button
-            className={`tabs__button ${!isPhoneForm ? "active" : ""}`}
+            className={`form__tabs__button ${
+              !isPhoneForm ? "form__tabs__button--active" : ""
+            }`}
             onClick={toggleForm}
             id="reg-btn-email"
           >
-            <span className="title">По e-mail</span>
+            <span className="form__tabs__button__title">По e-mail</span>
           </button>
         </li>
       </ul>
       <form className="" action="#">
         {isPhoneForm ? (
           <>
-            <div className="form-phone">
-              <p className="phone-form__header">
+            <div className="form__phone">
+              <p className="form__phone__header">
                 Введите номер своего телефона
               </p>
               <PhoneDropdown options={phones} />
@@ -79,9 +81,9 @@ const Form = () => {
           </>
         ) : (
           <div id="form" method="post" action="#">
-            <div className="email-form">
+            <div className="form__email">
               <input
-                className="email-form__email-input"
+                className="form__email__input"
                 type="text"
                 required
                 placeholder="E-mail"
@@ -91,7 +93,7 @@ const Form = () => {
             </div>
             <div className="password-form">
               <input
-                className="email-form__password-input"
+                className="form__password__input"
                 type={isPasswordVisible ? "text" : "password"}
                 required
                 placeholder="Пароль"
@@ -99,7 +101,7 @@ const Form = () => {
                 name="password"
               />
               <div
-                className="email-form__view-icon"
+                className="form__password__view-icon"
                 onClick={togglePasswordVisibility}
               >
                 {isPasswordVisible ? (
@@ -111,11 +113,11 @@ const Form = () => {
             </div>
           </div>
         )}
-        <div className="form-currency">
+        <div className="form__currency">
           <select
             value={currency}
             onChange={handleCurrency}
-            className="currency-dropdown"
+            className="form__currency-dropdown"
           >
             <option value="kaz">₸ | KZT | Казахстан</option>
             <option value="rus">₽ | RUB | Россия</option>
@@ -123,31 +125,31 @@ const Form = () => {
           </select>
         </div>
         <button
-          className="submit-btn"
+          className="form__submit-btn"
           type="button"
           onClick={(e) => handleSubmit(e)}
         >
           Зарегистрироваться
         </button>
-        <div className="forms__questions">
+        <div className="form__questions">
           {"Уже есть аккаунт? "}
-          <a className="forms__signin-link" href="#">
+          <a className="form__questions__link" href="#">
             Войти
           </a>
         </div>
-        <div className="checkbox">
-          <div className="checkbox__item checkbox__item_rules">
+        <div className="form__checkbox">
+          <div className="form__checkbox__item form__checkbox__item--rules">
             <Checkbox label={rules} handler={setRules} />
-            <div className="checkbox__text">
+            <div className="form__checkbox__text">
               {"Я согласен "}
-              <a className="forms__signin-link" href="#">
+              <a className="form__questions__link" href="#">
                 с правилами и условиями
               </a>
             </div>
           </div>
-          <div className="checkbox__item checkbox__item_sub">
+          <div className="form__checkbox__item form__checkbox__item--sub">
             <Checkbox label={policy} handler={setPolicy} />
-            <div className="checkbox__text">
+            <div className="form__checkbox__text">
               Получать рассылку об акциях по e-mail и sms
             </div>
           </div>

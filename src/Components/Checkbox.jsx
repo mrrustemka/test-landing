@@ -2,10 +2,10 @@ import "../App.css";
 
 const Checkbox = ({ label, handler }) => {
   return (
-    <label className="checkbox-container">
+    <label className="checkbox">
       {label}
       <input type="checkbox" checked={label} onChange={() => handler()} />
-      <span className="custom-checkbox"></span>
+      <span className="checkbox__custom"></span>
     </label>
   );
 };

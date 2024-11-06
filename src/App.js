@@ -69,6 +69,7 @@ function App() {
   return (
     <div className="app">
       <div
+        className="app__background"
         style={{
           width: "100vw",
           height: "100vh",
@@ -83,11 +84,11 @@ function App() {
           backgroundRepeat: "no-repeat"
         }}
       >
-        <div className="falling-coins-container">
+        <div className="app__coins-container">
           {coins.map((coin) => (
             <div
               key={coin.id}
-              className="falling-coin"
+              className="app__coin"
               style={{
                 left: `${coin.positionX}vw`, // Set random horizontal position (in viewport width)
                 animationDuration: `${coin.animationDuration}s`
@@ -96,7 +97,7 @@ function App() {
               <img src={coin.image} alt="coin" />
             </div>
           ))}
-          <div className="content">
+          <div className="app__content">
             <Header />
             <Slogan />
             <Form />

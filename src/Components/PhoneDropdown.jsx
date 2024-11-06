@@ -21,17 +21,17 @@ const PhoneDropdown = ({ options }) => {
   return (
     <div className="dropdown">
       <button
-        className={`dropdown-button ${isOpen ? "open" : ""}`}
+        className={`dropdown__button ${isOpen ? "dropdown__button--open" : ""}`}
         onClick={toggleDropdown}
       >
-        <img className="dropdown-button-flag" src={selected} alt="flag" />
+        <img className="dropdown__button__flag" src={selected} alt="flag" />
       </button>
       {isOpen && (
-        <ul className="dropdown-menu">
+        <ul className="dropdown__menu">
           {options.map((option, index) => (
             <li
               key={index}
-              className="dropdown-option"
+              className="dropdown__option"
               onClick={() => handleSelect(option)}
             >
               <img src={option.logo} alt={option.name} />
@@ -41,7 +41,7 @@ const PhoneDropdown = ({ options }) => {
         </ul>
       )}
       <input
-        className="dropdown-phone"
+        className="dropdown__phone"
         value={phoneCode}
         onChange={(e) => handleChange(e.target.value)}
       />
