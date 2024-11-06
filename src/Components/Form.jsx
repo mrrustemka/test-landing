@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import show from "../Images/view-white.svg";
 import hide from "../Images/view-close-white.svg";
+import Checkbox from "./Checkbox";
 
 // import kaz from "../Images/kazakhstan.png";
 // import rus from "../Images/russia.png";
@@ -11,7 +12,7 @@ const Form = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [phoneCountry, setPhoneCountry] = useState("kaz");
   const [currency, setCurrency] = useState("kaz");
-  const [rules, setRules] = useState(true);
+  const [rules, setRules] = useState(false);
   const [policy, setPolicy] = useState(true);
 
   const handlePhoneCountry = (event) => {
@@ -32,14 +33,6 @@ const Form = () => {
 
   const handleSubmit = () => {
     alert("Submitted");
-  };
-
-  const handleRules = () => {
-    setRules(!rules);
-  };
-
-  const handlePolicy = () => {
-    setPolicy(!policy);
   };
 
   return (
@@ -158,14 +151,7 @@ const Form = () => {
         </div>
         <div className="checkbox">
           <div className="checkbox__item checkbox__item_rules">
-            <input
-              className="checkbox__input"
-              type="checkbox"
-              id="check-rules-p"
-              onChange={() => handleRules()}
-              checked={rules}
-              required
-            />
+            <Checkbox label={rules} handler={setRules} />
             <div className="checkbox__text">
               {"Я согласен "}
               <a className="forms__signin-link" href="#">
@@ -174,12 +160,7 @@ const Form = () => {
             </div>
           </div>
           <div className="checkbox__item checkbox__item_sub">
-            <input
-              className="checkbox__input"
-              type="checkbox"
-              checked={policy}
-              onChange={() => handlePolicy()}
-            />
+            <Checkbox label={policy} handler={setPolicy} />
             <div className="checkbox__text">
               Получать рассылку об акциях по e-mail и sms
             </div>
