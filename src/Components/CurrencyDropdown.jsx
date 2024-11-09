@@ -7,19 +7,19 @@ const CurrencyDropdown = () => {
       value: "KZT",
       icon: "₸",
       name: "KZT",
-      fullName: "Казахстанский тенге"
+      fullName: "Kazakhstan tenge"
     },
     {
       value: "RUB",
       icon: "₽",
       name: "RUB",
-      fullName: "Российский рубль"
+      fullName: "Russian ruble"
     },
     {
       value: "TRY",
       icon: "₺",
       name: "TRY",
-      fullName: "Турецкая лира"
+      fullName: "Turkish lira"
     }
   ];
 

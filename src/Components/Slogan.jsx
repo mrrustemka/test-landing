@@ -3,8 +3,8 @@ import React from "react";
 function Slogan() {
   return (
     <div className="slogan">
-      Забирай бонус и <br />
-      срывай джекпот
+      Take the bonus and <br />
+      hit the jackpot
     </div>
   );
 }

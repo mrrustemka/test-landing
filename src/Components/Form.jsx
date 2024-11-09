@@ -10,9 +10,9 @@ import tur from "../Images/turkey.png";
 
 const Form = () => {
   const phones = [
-    { id: 1, name: "kaz", label: "+7 Казахстан", code: "+7", logo: kaz },
-    { id: 2, name: "rus", label: "+7 Россия", code: "+7", logo: rus },
-    { id: 3, name: "tur", label: "+90 Турция", code: "+90", logo: tur }
+    { id: 1, name: "kaz", label: "+7 Kazakhstan", code: "+7", logo: kaz },
+    { id: 2, name: "rus", label: "+7 Russia", code: "+7", logo: rus },
+    { id: 3, name: "tur", label: "+90 Turkey", code: "+90", logo: tur }
   ];
   const [isPhoneForm, setIsPhoneForm] = useState(true);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -45,13 +45,8 @@ const Form = () => {
 
   return (
     <div className="form">
-      {/* <img
-        className="modal__gift modal__gift--top"
-        src="img/bonus/gift.png"
-        alt="Gift"
-      /> */}
       <div className="form__title">
-        <div className="form__title__text">НА ПЕРВЫЙ ДЕПОЗИТ</div>
+        <div className="form__title__text">ON THE FIRST DEPOSIT</div>
         <div className="form__bonus">2 000 000₸ + 250 FS!</div>
       </div>
       <ul className="form__tabs">
@@ -63,7 +58,7 @@ const Form = () => {
             onClick={toggleForm}
             id="reg-btn-tel"
           >
-            <span className="form__tabs__button__title">По телефону</span>
+            <span className="form__tabs__button__title">By Phone</span>
           </button>
         </li>
         <li className="form__tabs__item">
@@ -74,7 +69,7 @@ const Form = () => {
             onClick={toggleForm}
             id="reg-btn-email"
           >
-            <span className="form__tabs__button__title">По e-mail</span>
+            <span className="form__tabs__button__title">By e-mail</span>
           </button>
         </li>
       </ul>
@@ -82,9 +77,7 @@ const Form = () => {
         {isPhoneForm ? (
           <>
             <div className="form__phone">
-              <p className="form__phone__header">
-                Введите номер своего телефона
-              </p>
+              <p className="form__phone__header">Enter your phone number</p>
               <PhoneDropdown options={phones} />
             </div>
           </>
@@ -105,7 +98,7 @@ const Form = () => {
                 className="form__password__input"
                 type={isPasswordVisible ? "text" : "password"}
                 required
-                placeholder="Пароль"
+                placeholder="Password"
                 id="password-input"
                 name="password"
               />
@@ -128,28 +121,28 @@ const Form = () => {
           type="button"
           onClick={(e) => handleSubmit(e)}
         >
-          Зарегистрироваться
+          Sign Up
         </button>
         <div className="form__questions">
-          {"Уже есть аккаунт? "}
+          {"Already have an account? "}
           <a className="form__questions__link" href="#">
-            Войти
+            Sign in
           </a>
         </div>
         <div className="form__checkbox">
           <div className="form__checkbox__item form__checkbox__item--rules">
             <Checkbox checked={rules} handler={handleRulesChange} />
             <div className="form__checkbox__text">
-              {"Я согласен "}
+              {"I agree to "}
               <a className="form__questions__link" href="#">
-                с правилами и условиями
+                the terms and conditions
               </a>
             </div>
           </div>
           <div className="form__checkbox__item form__checkbox__item--sub">
             <Checkbox checked={policy} handler={handlePolicyChange} />
             <div className="form__checkbox__text">
-              Получать рассылку об акциях по e-mail и sms
+              Receive newsletters about promotions by e-mail and sms
             </div>
           </div>
         </div>
