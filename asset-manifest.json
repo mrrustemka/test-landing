@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/test-landing/static/css/main.b4593b48.css",
+    "main.js": "/test-landing/static/js/main.f5404b94.js",
+    "static/js/453.c12167c9.chunk.js": "/test-landing/static/js/453.c12167c9.chunk.js",
+    "static/media/girl-right.png": "/test-landing/static/media/girl-right.55439c1e38cfad23a2e0.png",
+    "static/media/girl-left.png": "/test-landing/static/media/girl-left.81e812869cb53b754237.png",
+    "static/media/bg-center.png": "/test-landing/static/media/bg-center.7298629ef1e7b8b287a4.png",
+    "static/media/coins.png": "/test-landing/static/media/coins.b97e85f6a9d8546a4d2a.png",
+    "static/media/bg.jpg": "/test-landing/static/media/bg.41472fa48952e0e914c4.jpg",
+    "static/media/logo-second.png": "/test-landing/static/media/logo-second.ce6df186f4aced1d1252.png",
+    "static/media/coin-1.png": "/test-landing/static/media/coin-1.60c6716f39917889e80f.png",
+    "static/media/coin-7.png": "/test-landing/static/media/coin-7.6f4227a0e02eb8d8c327.png",
+    "static/media/coin-4.png": "/test-landing/static/media/coin-4.e8085bcc0551c0710813.png",
+    "static/media/logo_casino.svg": "/test-landing/static/media/logo_casino.9350713bab5bf97054b8abeae276cb20.svg",
+    "static/media/view-close-white.svg": "/test-landing/static/media/view-close-white.7b2ed59a0a380ecd2cd3deaa6bc21411.svg",
+    "static/media/view-white.svg": "/test-landing/static/media/view-white.7eafa156cdadd8f1fd556c8f03d1b471.svg",
+    "index.html": "/test-landing/index.html",
+    "static/media/checkbox.svg": "/test-landing/static/media/checkbox.490c5d56ddfbd1b7adc2.svg",
+    "main.b4593b48.css.map": "/test-landing/static/css/main.b4593b48.css.map",
+    "main.f5404b94.js.map": "/test-landing/static/js/main.f5404b94.js.map",
+    "453.c12167c9.chunk.js.map": "/test-landing/static/js/453.c12167c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4593b48.css",
+    "static/js/main.f5404b94.js"
+  ]
+}
