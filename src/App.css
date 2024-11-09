@@ -331,6 +331,7 @@ body {
 
 .dropdown {
   position: relative;
+  display: flex;
 }
 
 .dropdown__button {
@@ -340,12 +341,13 @@ body {
   background-color: transparent;
   color: #fff;
   border: none;
-  border-right: 1px solid #fff;
   width: 15%;
+  display: flex;
 }
 
 .dropdown__menu {
   position: absolute;
+  top: 19px;
   width: 100%;
   background-color: #840121;
   border: 1px solid #fff;
@@ -389,6 +391,8 @@ body {
   width: 82%;
   padding: 0 0.2rem;
   outline: none;
+  border-left: 1px solid white;
+  margin-left: 0.6rem;
 }
 
 .app__background {
@@ -434,7 +438,7 @@ body {
 
 .select-currency__list {
   position: absolute;
-  top: 100%;
+  top: 24px;
   left: 0;
   width: 100%;
   background-color: #840121;
@@ -465,4 +469,43 @@ body {
 
 .select-currency__default-input {
   display: none;
+}
+
+.dropdown__button__arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.dropdown__button__arrow--open {
+  transform: rotate(180deg);
+}
+
+.select-currency__main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+}
+
+.dropdown__arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.dropdown__arrow--open {
+  transform: rotate(180deg);
 }

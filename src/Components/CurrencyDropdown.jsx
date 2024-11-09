@@ -36,7 +36,9 @@ const CurrencyDropdown = () => {
   return (
     <div className="select-currency">
       <button
-        className="select-currency__main js--currency"
+        className={`select-currency__main js--currency ${
+          isOpen ? "select-currency__main--open" : ""
+        }`}
         type="button"
         onClick={toggleDropdown}
       >
@@ -51,6 +53,9 @@ const CurrencyDropdown = () => {
             {selectedCurrency.fullName}
           </div>
         </div>
+        <span
+          className={`dropdown__arrow ${isOpen ? "dropdown__arrow--open" : ""}`}
+        />
       </button>
 
       {isOpen && (

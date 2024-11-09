@@ -26,6 +26,13 @@ const PhoneDropdown = ({ options }) => {
         onClick={toggleDropdown}
       >
         <img className="dropdown__button__flag" src={selected} alt="flag" />
+        <span
+          className={`dropdown__button__arrow ${
+            isOpen ? "dropdown__button__arrow--open" : ""
+          }`}
+        >
+          ▼
+        </span>
       </button>
       {isOpen && (
         <ul className="dropdown__menu">
